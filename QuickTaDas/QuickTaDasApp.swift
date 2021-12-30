@@ -13,7 +13,7 @@ struct QuickTaDasApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TaDaListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

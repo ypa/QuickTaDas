@@ -13,6 +13,8 @@
 		F96D2D9B27781A3300E52A72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96D2D9A27781A3300E52A72 /* Preview Assets.xcassets */; };
 		F96D2D9D27781A3300E52A72 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D2D9C27781A3300E52A72 /* Persistence.swift */; };
 		F96D2DA027781A3400E52A72 /* QuickTaDas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F96D2D9E27781A3400E52A72 /* QuickTaDas.xcdatamodeld */; };
+		F96D2DA7277D5DFF00E52A72 /* TaDaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D2DA6277D5DFF00E52A72 /* TaDaListView.swift */; };
+		F96D2DA9277D617900E52A72 /* AddTaDaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96D2DA8277D617900E52A72 /* AddTaDaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		F96D2D9A27781A3300E52A72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F96D2D9C27781A3300E52A72 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F96D2D9F27781A3400E52A72 /* QuickTaDas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickTaDas.xcdatamodel; sourceTree = "<group>"; };
+		F96D2DA6277D5DFF00E52A72 /* TaDaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaDaListView.swift; sourceTree = "<group>"; };
+		F96D2DA8277D617900E52A72 /* AddTaDaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaDaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			children = (
 				F96D2D9327781A3000E52A72 /* QuickTaDasApp.swift */,
 				F96D2D9527781A3000E52A72 /* ContentView.swift */,
+				F96D2DA6277D5DFF00E52A72 /* TaDaListView.swift */,
+				F96D2DA8277D617900E52A72 /* AddTaDaView.swift */,
 				F96D2D9727781A3300E52A72 /* Assets.xcassets */,
 				F96D2D9C27781A3300E52A72 /* Persistence.swift */,
 				F96D2D9E27781A3400E52A72 /* QuickTaDas.xcdatamodeld */,
@@ -143,9 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96D2DA7277D5DFF00E52A72 /* TaDaListView.swift in Sources */,
 				F96D2D9D27781A3300E52A72 /* Persistence.swift in Sources */,
 				F96D2DA027781A3400E52A72 /* QuickTaDas.xcdatamodeld in Sources */,
 				F96D2D9627781A3000E52A72 /* ContentView.swift in Sources */,
+				F96D2DA9277D617900E52A72 /* AddTaDaView.swift in Sources */,
 				F96D2D9427781A3000E52A72 /* QuickTaDasApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
