@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TaDaListView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \ToDo.title, ascending: true)], animation: .default)
     private var toDos: FetchedResults<ToDo>
     
@@ -17,6 +18,7 @@ struct TaDaListView: View {
                 ForEach(toDos) { listedToDo in
                     Text(listedToDo.title!)
                 }
+                .onDelete(perform: deleteItems)
             }
             .navigationTitle("Quick ToDos")
             .toolbar {
@@ -26,6 +28,13 @@ struct TaDaListView: View {
                     }
                 }
             }
+        }
+    }
+    
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { toDos[$0] }.forEach(viewContext.delete)
+            try? viewContext.save()
         }
     }
 }
