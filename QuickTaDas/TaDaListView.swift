@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct TaDaListView: View {
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \ToDo.title, ascending: true)], animation: .default)
+    private var toDos: FetchedResults<ToDo>
+    
     var body: some View {
         NavigationView {
-            Text("TaDa List View")
-                .navigationTitle("Quick ToDos")
-                .toolbar {
-                    ToolbarItem {
-                        NavigationLink(destination: AddTaDaView()) {
-                            Label("Add Item", systemImage: "plus.circle.fill")
-                        }
+            List {
+                ForEach(toDos) { listedToDo in
+                    Text(listedToDo.title!)
+                }
+            }
+            .navigationTitle("Quick ToDos")
+            .toolbar {
+                ToolbarItem {
+                    NavigationLink(destination: AddTaDaView()) {
+                        Label("Add Item", systemImage: "plus.circle.fill")
                     }
                 }
+            }
         }
     }
 }
