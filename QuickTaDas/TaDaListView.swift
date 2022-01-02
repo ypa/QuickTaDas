@@ -16,7 +16,10 @@ struct TaDaListView: View {
         NavigationView {
             List {
                 ForEach(toDos) { listedToDo in
-                    Text(listedToDo.title!)
+                    NavigationLink(destination: Text(listedToDo.title!).font(.largeTitle).padding()) {
+                        Text(listedToDo.title!)
+                            .lineLimit(1)
+                    }
                 }
                 .onDelete(perform: deleteItems)
             }
